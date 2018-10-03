@@ -1,7 +1,30 @@
 ﻿@{
     ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+}
+<div>
+    <h1>What makes us move</h1>
+</div>
+
+<div>
+    <p>
+        With his life savings in hand and a dream in mind our founder Brandon Steinbeigle
+        envisions a world where we can enrich our own lives by renting out our own cars
+        earning extra cash on the side while creating financial freedom for those in our network.
+        He believes that in doing so, a larger problem in the world can also be solved, connecting
+        the have-nots with adequate, reliable means of transportation who, by no fault of their
+        own, would not have the opportunity or ability to do so otherwise. Click on “Our Story”
+        to learn more.
+    </p>
+</div>
+
+@section scripts{
+    <script>
+    $(document).ready(function () {
+        $('#headerPic').attr("style", "background-image:url('../../Images/AboutUsLend.jpg')");
+
+    });
+</script>
+
+}
+

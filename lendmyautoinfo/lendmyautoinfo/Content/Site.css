@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+ 
     padding-bottom: 20px;
 }
 
@@ -22,3 +22,75 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.pill {
+    width: 40%;
+    margin: auto;
+    background-image: linear-gradient(rgb(133, 134, 140),rgb(133, 134, 140));
+    min-width: 220px;
+    border-radius: 30px !important;
+    height: 45px !important;
+    z-index: 9999;
+    padding-top: 9px;
+}
+
+/*Image style for navbar and the main heading per page */
+
+header {
+    height: 100vh;
+    min-height: 400px;
+    width: 100%;
+    background-size: cover;
+    background-image: url('../../Images/sampleLEndMYAUTO.jpeg');
+}
+.navbar {
+    transition: background-color 1s ease 0s;
+}
+header > p {
+    text-align: center;
+    padding: 20px 60px;
+    
+}
+header > .btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    font-size: 1.2em;
+     
+ }
+.btn:hover {
+    color: #C57ED3;
+    border-color: #C57ED3;
+}
+header > .heading {
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+}
+
+/*end the navbar styles */
+
+/*Solid nav bar style*/
+.solid {
+    background-color: #2D2D2D;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+
+
+.navbar-nav > li {
+    color: #C57ED3;
+    transition: color 1s ease 0s;
+}
+.navbar-nav > a {
+    color: #C57ED3;
+    transition: color 1s ease 0s;
+}
+/*End solid styles*/
+
+
+
+
+
+
