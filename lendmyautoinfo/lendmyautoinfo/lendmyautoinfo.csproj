@@ -161,9 +161,17 @@
     </Content>
     <Content Include="Images\AboutUsLend.jpg" />
     <Content Include="Images\carkeys.jpg" />
+    <Content Include="Images\checkbox.png" />
+    <Content Include="Images\contactuslendmyauto.jpg" />
     <Content Include="Images\lendmyauto2.png" />
+    <Content Include="Images\moneyhand.png" />
     <Content Include="Images\sampleLEndMyAuto.jpeg" />
+    <Content Include="Images\settingsicon.jpg" />
     <Content Include="Images\stock photo car person.jpg" />
+    <Content Include="Images\umbrella2.png" />
+    <Content Include="Images\umbrella3.png" />
+    <Content Include="Images\volunteer2.png" />
+    <Content Include="Images\volunteering.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />

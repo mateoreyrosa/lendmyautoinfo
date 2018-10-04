@@ -1,7 +1,89 @@
 ﻿@{
     ViewBag.Title = "Lend My Auto Home";
-  
+
 }
 
+<div class="container" style="padding-top:30px;">
 
+    <div class="row" style="padding-top: 15px;">
+        <div class="col-lg-4" style="text-align:center">
+            <div class="space">
+                <img src="~/Images/moneyhand.png" style="width:50%;" />
+            </div>
+            <h2>Pay once. Save lots.</h2>
+            <p>
+                Avoid the rental counter. As a member you gain access to a network of “car sharers” at airports or wherever your travels may take you.
+            </p>
+        </div>
+        <div class="col-lg-4" style="text-align:center">
+            <div class="space">
+                <img src="~/Images/settingsicon.jpg" style="width:50%;" />
 
+            </div>
+            <h2>
+                How does it work?
+            </h2>
+            <p>
+                You share your car while you’re away and someone else shares their car for you to use where you’re headed.  Simple as that. A community of “car-sharers”.
+            </p>
+        </div>
+        <div class="col-lg-4" style="text-align:center">
+            <div class="space">
+                <img src="~/Images/umbrella3.png" style="width:50%" />
+            </div>
+            <h2>
+                What about Insurance?
+            </h2>
+            <p>
+                Don’t stress about the insurance.
+                Once vetted by one of our representatives the renter
+                can elect to use their own insurance or use our $1,000,000 comprehensive insurance policy.  In either case as an owner your vehicle is covered.
+
+            </p>
+        </div>
+    </div>
+    
+    <div class="row " style="padding-top:30px;">
+        <div class="col-lg-6 " style="text-align:center">
+            <div class="space">
+                <img src="~/Images/checkbox.png" style="width:25%" />
+            </div>
+            <h2>
+                Still not sure?
+            </h2>
+            <p>
+                As a part of our service during each rental, a member of our team will physically check-in/out each vehicle that is rented.
+            </p>
+        </div>
+        <div class="col-lg-6 " style="text-align:center">
+            <div class="space">
+                <img src="~/Images/volunteer2.png" style="width:25%;" />
+            </div>
+            <h2 >
+                Our Social Mission
+            </h2>
+            <p class="justify-content-center">
+                As a part of our business model we aim to give back to those, who by no fault of their own,
+                don’t have access to reliable forms of transportation in your community and around the world
+                keeping sustainability in mind. Peers helping out their peers. Beautiful.
+
+            </p>
+        </div>
+    </div>
+</div>
+<style>
+    .space {
+    padding-bottom: 15px;
+    
+    }
+</style>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#headerPic').attr("style", "background-image:url('../../Images/sampleLEndMyAuto.jpeg')");
+            $("h1.heading").text("Lending Made Easy");
+        });
+    </script>
+
+}
