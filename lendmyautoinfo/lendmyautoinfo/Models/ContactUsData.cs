@@ -10,5 +10,7 @@ namespace lendmyautoinfo.Models
         public string EmailAddress { get; set; }
         public string Name { get; set; }
         public string Message { get; set; }
+        public bool Success { get; set; }
+        public string AlertName { get; set; }
     }
 }

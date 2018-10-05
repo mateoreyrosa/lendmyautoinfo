@@ -17,11 +17,7 @@
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
-}
+
 
 .pill {
     width: 40%;
@@ -33,6 +29,15 @@ textarea {
     z-index: 9999;
     padding-top: 9px;
 }
+
+.pill-text {
+    z-index: inherit;
+    color: white;
+    white-space: nowrap;
+    text-align: center;
+    font: normal 15px / 27px "Roboto", Helvetica, Arial, Verdana, sans-serif;
+}
+
 
 /*Image style for navbar and the main heading per page */
 
@@ -46,6 +51,14 @@ header {
 .navbar {
     transition: background-color 1s ease 0s;
 }
+
+.nav-link {
+    color: #BDBDBE !important;
+    
+}
+    .nav-link:hover {
+        color: #E6E7E7 !important;
+    }
 header > p {
     text-align: center;
     padding: 20px 60px;
@@ -59,10 +72,7 @@ header > .btn {
     font-size: 1.2em;
      
  }
-.btn:hover {
-    color: #C57ED3;
-    border-color: #C57ED3;
-}
+
 header > .heading {
     color: white;
     text-align: center;
@@ -89,6 +99,28 @@ header > .heading {
 }
 /*End solid styles*/
 
+
+.steps {
+
+    padding-top:15px;
+    padding-bottom:15px; 
+}
+
+.step {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: rgb(206, 206, 206);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.step-title {
+    font-weight: 700;
+    font-size: 18px;
+}
+.step-description {
+    color: #666;
+    font-size: 16px;
+}
 
 
 

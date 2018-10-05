@@ -29,7 +29,13 @@ namespace lendmyautoinfo.Controllers
         [HttpPost]
         public ActionResult Contact(ContactUsData model)
         {
-            return View();
+            ModelState.Clear();
+            ContactUsData returnModel = new ContactUsData() {
+                AlertName = model.Name,
+                Success = true,
+            };
+            
+            return View(returnModel);
         }
 
         public ActionResult Sharing()
