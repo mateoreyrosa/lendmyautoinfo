@@ -164,7 +164,11 @@
     <Content Include="Images\carkeys.jpg" />
     <Content Include="Images\checkbox.png" />
     <Content Include="Images\contactuslendmyauto.jpg" />
+    <Content Include="Images\FAQ.jpeg" />
+    <Content Include="Images\lendapp.jpeg" />
+    <Content Include="Images\lendhome.jpeg" />
     <Content Include="Images\lendmyauto2.png" />
+    <Content Include="Images\lendshare.jpeg" />
     <Content Include="Images\moneyhand.png" />
     <Content Include="Images\sampleLEndMyAuto.jpeg" />
     <Content Include="Images\settingsicon.jpg" />
@@ -246,6 +250,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Sharing.cshtml" />
+    <Content Include="Views\Home\FAQ.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

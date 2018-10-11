@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "FAQ";
+}
+
+<div class="container" style="padding-top:70px; text-align:center;">
+    <h1 class="d-flex justify-content-center">FAQ's</h1>
+    <div class="accordion" id="accordionFAQ">
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        What is peer-to-peer (P2P) car sharing?
+                    </button>
+               
+            </div>
+
+            <div id="collapseOne" class="collapse show" aria-labelledby= "headingOne" data-parent="#accordionFAQ">
+                <div class="card-body">
+                    Peer-to-Peer car sharing is the process of allowing individual owners to list their own
+                    personal cars for rent.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        What are the benefits of car-sharing?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionFAQ">
+                <div class="card-body">
+                    Better utilization of cars that sit idle 90 percent of their lives. Saves our members money
+                    over traditional car rental companies. Meet other car sharing enthusiasts just like you.
+                    Too many other benefits to list….
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        So I’m away traveling, and someone wrecks my car. What happens?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionFAQ">
+                <div class="card-body">
+                    Unfortunately, accidents do happen. To better serve our members we physically check
+                    in/out each vehicle ensuring those that are responsible for damage or uncleanliness are
+                    held accountable. If it’s decided an insurance claim needs to be filed, we will be at your
+                    side every step of the way making the process less painful working directly with the
+                    insurance provider. We believe in providing a real service for our members not just an
+                    serving as an interface for our users.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFour">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        I don’t own a car. Can I still become a member?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionFAQ">
+                <div class="card-body">
+                    You certainly can. Your yearly membership fee may be higher and, if so, would go
+                    directly towards helping owners cover the expenses associated with vehicle ownership.
+                    It’s important to note the membership fee would still be far less than if you rented
+                    through a traditional car rental company or other car sharing platform.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingFive">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                        As a vehicle owner why would I use this service?
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionFAQ">
+                <div class="card-body">
+                    Those of us who own vehicles often have to rent them from time to time and car rental
+                    is expensive. As our network grows we provide incentives to vehicle owners which can
+                    be used to help cover some of the financial burdens that go along with vehicle
+                    ownership. Do you own a vehicle and have an idea for incentives? Would love to hear
+                    from you. Please reach out “here”
+                    “here” above redirects you to info@lendmyauto.com
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-top:15px;">
+
+        Other questions in mind? Please reach out by clicking “here” Look forward to hearing
+        from you. Let’s keep this dialogue going!
+        “here” above redirects you to info@lendmyauto.com
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            $('#headerPic').attr("style", "background-image:url('../../Images//FAQ.jpeg')");
+            $("h1.heading").text("Lending Made Easy");
+        });
+    </script>
+
+}
