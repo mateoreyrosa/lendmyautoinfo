@@ -5,49 +5,89 @@
 }
 
 <div class="container" style="padding-top:70px;">
+    @* @if (Model.Success == true)
+        {
+            <div class="pill pill-text" style="padding-bottom:15px;" id="SuccessAlert">
+                Thank you @Model.AlertName! We will be in touch
+            </div>
+        }*@
     @if (Model.Success == true)
     {
-        <div class="pill pill-text" style="padding-bottom:15px;" id="SuccessAlert">
-            Thank you @Model.AlertName! We will be in touch
+        <div id="ContactAlert"class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Thank you @Model.AlertName!</strong> We will be in touch
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
     }
 
+
     <p style="padding-top:15px;">Got a question for us? We're happy to answer. Fill out the form and we'll get back to you as soon as we can.</p>
-    @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
-    {
+
+
+    <form class="needs-validation" action="/Home/Contact" method="post" novalidate>
         <div class="form-group">
             <label for="Name">Name</label>
-            @Html.TextBoxFor(m => m.Name, null, new { @class = "form-control", @placeholder = "Name" })
+            <input type="text" class="form-control" id="Name" name="Name" placeholder="Full Name" required>
+            <div class="invalid-feedback">
+                Please provide a name.
+            </div>
         </div>
         <div class="form-group">
             <label for="EmailAddress">Email</label>
-            @Html.TextBoxFor(m => m.EmailAddress, null, new { @class = "form-control", @placeholder = "Email Address" })
+            <input type="email" class="form-control" id="EmailAddress" name="EmailAddress" placeholder="Email Address" required>
+            <div class="invalid-feedback">
+                Please provide an email.
+            </div>
         </div>
         <div class="form-group">
             <label for="Message">Message</label>
-            @Html.TextAreaFor(m => m.Message, new { @class = "form-control", @placeholder = "Message" })
+            <textarea class="form-control" id="Message" name="Message" rows="3" placeholder="Message" required></textarea>
+            <div class="invalid-feedback">
+                Please provide a message.
+            </div>
         </div>
         <button class="btn btn-secondary" type="submit">Send Message</button>
 
-    }
+    </form>
 </div>
 
 
 
-        @section scripts{
-            <script>
-                $(document).ready(function () {
-                    $('#headerPic').attr("style", "background-image:url('../../Images/lendapp.jpeg')");
-                    $("h1.heading").text("Contact Us");
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#headerPic').attr("style", "background-image:url('../../Images/lendapp.jpeg')");
+            $("h1.heading").text("Contact Us");
 
-                    
-                });
-                document.addEventListener("DOMContentLoaded", function (event) {
-                    setTimeout(function () {
-                        var updateAlert = document.getElementById("SuccessAlert");
-                        updateAlert.style.display = "none";
-                    }, 5000);
-                });
-            </script>
 
-        }
+        });
+        document.addEventListener("DOMContentLoaded", function (event) {
+            setTimeout(function () {
+                //var updateAlert = document.getElementById("SuccessAlert");
+                //updateAlert.style.display = "none";
+                if ($('#ContactAlert').length) {
+                    document.getElementById("ContactAlert").style.display = "none";
+                }
+            }, 5000);
+        });
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+}
