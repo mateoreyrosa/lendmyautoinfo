@@ -3,19 +3,16 @@
     ViewBag.Title = "FAQ";
 }
 
-<div class="container" style="padding-top:70px; text-align:center;">
-    <h1 class="d-flex justify-content-center">FAQ's</h1>
+<div class="container" style="padding-top:70px;">
+    <h1 class="d-flex justify-content-center" style="padding-bottom:15px;">FAQ's</h1>
     <div class="accordion" id="accordionFAQ">
         <div class="card">
             <div class="card-header" id="headingOne">
-                
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        What is peer-to-peer (P2P) car sharing?
-                    </button>
-               
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span class="panel-body">What is peer-to-peer (P2P) car sharing?</span>
+                </button>
             </div>
-
-            <div id="collapseOne" class="collapse show" aria-labelledby= "headingOne" data-parent="#accordionFAQ">
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionFAQ">
                 <div class="card-body">
                     Peer-to-Peer car sharing is the process of allowing individual owners to list their own
                     personal cars for rent.
@@ -26,7 +23,7 @@
             <div class="card-header" id="headingTwo">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        What are the benefits of car-sharing?
+                        <span class="panel-body">What are the benefits of car-sharing?</span>
                     </button>
                 </h5>
             </div>
@@ -42,7 +39,7 @@
             <div class="card-header" id="headingThree">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        So I’m away traveling, and someone wrecks my car. What happens?
+                    <span class="panel-body">So I’m away traveling, and someone wrecks my car. What happens?</span>
                     </button>
                 </h5>
             </div>
@@ -61,7 +58,7 @@
             <div class="card-header" id="headingFour">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                        I don’t own a car. Can I still become a member?
+                        <span class="panel-body">I don’t own a car. Can I still become a member?</span>
                     </button>
                 </h5>
             </div>
@@ -78,7 +75,7 @@
             <div class="card-header" id="headingFive">
                 <h5 class="mb-0">
                     <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                        As a vehicle owner why would I use this service?
+                        <span class="panel-body">As a vehicle owner why would I use this service?</span>
                     </button>
                 </h5>
             </div>
@@ -88,26 +85,73 @@
                     is expensive. As our network grows we provide incentives to vehicle owners which can
                     be used to help cover some of the financial burdens that go along with vehicle
                     ownership. Do you own a vehicle and have an idea for incentives? Would love to hear
-                    from you. Please reach out “here”
-                    “here” above redirects you to info@lendmyauto.com
+                    from you. Please reach out <a style="color:#4C4CE2" href="@Url.Action("Contact", "Home", new { scroll = 1})">here.</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSix">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                        <span class="panel-body">What makes your different from companies like Getaround and Turo?</span>
+</button>
+                </h5>
+            </div>
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionFAQ">
+                <div class="card-body">
+                    Turo and Getaround provides a platform for car owners to make money off their vehicles
+                    while they sit idle. Their business model is similar to the traditional car rental industry;
+                    however, instead of both companies owning a fleet of vehicles, individuals own the vehicles
+                    and they take a portion of the owners’ earnings in exchange for providing the online
+                    platform. It’s true rates shown on their platforms can be lower than those of traditional car
+                    rental companies; however more often than not, this is not the case. Cars rented on their
+                    platforms are still expensive which may result in spending hundreds to thousands of
+                    dollars in car rental yearly. 
+                    <p></p>
+                    <p>
+                    Lendmyauto.com is different because owners don’t make
+                    money directly by letting someone use their vehicle. Owners share their vehicles with
+                    others in exchange for being able to use someone else’s vehicle at a future date while
+                    traveling, which drastically reduces the cost of renting a car. Another way to say it is we
+                    focus on what our members can save not necessarily earn. We are a “tight knit” community
+                    of car sharers. One of our goals as an organization is to ensure the level of trust between
+                    members is constantly monitored and acted upon by those who may violate.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-header" id="headingSeven">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                        <span class="panel-body">So, what does my subscription pay for?</span>
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionFAQ">
+                <div class="card-body">
+                    Your annual subscription goes to cover the operating costs of our organization which
+                    includes monitoring those who use our services ensuring there is always a high level of
+                    trust between our members, vetting vehicles and our members, checking insurance and
+                    assisting with insurance claims should they arise, costs of physically checking-in and out
+                    each vehicle and updating our software to better align with our member’s needs.
                 </div>
             </div>
         </div>
     </div>
     <div style="padding-top:15px;">
 
-        Other questions in mind? Please reach out by clicking “here” Look forward to hearing
-        from you. Let’s keep this dialogue going!
-        “here” above redirects you to info@lendmyauto.com
-    </div>
-</div>
+        Other questions in mind? Please reach out by clicking <a style="color:#4C4CE2" href="@Url.Action("Contact", "Home", new { scroll = 1})">here.</a>
+    We look forward to hearing from you. Let’s keep this dialogue going!
 
+</div>
+</div>
 @section scripts{
     <script>
         $(document).ready(function () {
 
-            $('#headerPic').attr("style", "background-image:url('../../Images//FAQ.jpeg')");
-            $("h1.heading").text("Lending Made Easy");
+            $('#headerPic').attr("style", "background-image:url('../../Images/LendHome1.jpeg')");
+            $("h1.heading").text("FAQ's");
         });
     </script>
 

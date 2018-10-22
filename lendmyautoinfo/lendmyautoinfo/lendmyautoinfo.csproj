@@ -145,6 +145,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactUsData.cs" />
+    <Compile Include="Models\GMailer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -161,18 +162,33 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Images\AboutUsLend.jpg" />
-    <Content Include="Images\carkeys.jpg" />
     <Content Include="Images\checkbox.png" />
     <Content Include="Images\contactuslendmyauto.jpg" />
     <Content Include="Images\FAQ.jpeg" />
     <Content Include="Images\lendapp.jpeg" />
+    <Content Include="Images\LendBrick.jpeg" />
+    <Content Include="Images\LendCarSearch.png" />
+    <Content Include="Images\LendCommunity.jpeg" />
+    <Content Include="Images\LendContact.jpeg" />
+    <Content Include="Images\LendFacebook.png" />
+    <Content Include="Images\LendHome1.jpeg" />
     <Content Include="Images\lendhome.jpeg" />
+    <Content Include="Images\LendHome.png" />
+    <Content Include="Images\LendHome3White.jpeg" />
+    <Content Include="Images\LendInstagram.png" />
+    <Content Include="Images\LendLinkedIn.png" />
+    <Content Include="Images\LendMoney.png" />
     <Content Include="Images\lendmyauto2.png" />
+    <Content Include="Images\LendNumber1.png" />
+    <Content Include="Images\LendNumber2.png" />
+    <Content Include="Images\LendNumber3.png" />
+    <Content Include="Images\LendProfile.png" />
+    <Content Include="Images\LendSettings.png" />
     <Content Include="Images\lendshare.jpeg" />
+    <Content Include="Images\LendTwitter.png" />
+    <Content Include="Images\LendUserAdd.png" />
     <Content Include="Images\moneyhand.png" />
     <Content Include="Images\sampleLEndMyAuto.jpeg" />
-    <Content Include="Images\settingsicon.jpg" />
-    <Content Include="Images\stock photo car person.jpg" />
     <Content Include="Images\umbrella2.png" />
     <Content Include="Images\umbrella3.png" />
     <Content Include="Images\volunteer2.png" />
@@ -224,7 +240,6 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Images\addaccount.png" />
-    <Content Include="Images\findcar.png" />
     <Content Include="Images\unlockcar.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -251,6 +266,8 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Sharing.cshtml" />
     <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\Home\TermsAndConditions.cshtml" />
+    <Content Include="Views\Home\PrivacyPolicy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

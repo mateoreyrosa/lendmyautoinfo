@@ -125,8 +125,9 @@ header > .heading {
     color: #666;
     font-size: 16px;
 }
-
-
+p > a {
+    color: #4C4CE2;
+}
 /*Accordion Styles*/
 
 .card {
@@ -192,4 +193,13 @@ div:nth-child(2) button {
     color: #1c1d1d;
     background-color: #f7f7f7;
     border:0;
+}
+
+.panel-body {
+    word-wrap: break-word;
+    white-space:normal;
+}
+.card-body {
+font-size: 14px;
+
 }

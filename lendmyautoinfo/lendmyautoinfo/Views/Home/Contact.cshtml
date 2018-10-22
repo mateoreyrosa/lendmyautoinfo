@@ -5,27 +5,19 @@
 }
 
 <div class="container" style="padding-top:70px;">
-    @* @if (Model.Success == true)
-        {
-            <div class="pill pill-text" style="padding-bottom:15px;" id="SuccessAlert">
-                Thank you @Model.AlertName! We will be in touch
-            </div>
-        }*@
-    @if (Model.Success == true)
-    {
-        <div id="ContactAlert"class="alert alert-success alert-dismissible fade show" role="alert">
-            <strong>Thank you @Model.AlertName!</strong> We will be in touch
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
+        <div id="ContactAlert" class="alert alert-success alert-dismissible fade show" role="alert" style="display:none">
+            <strong id="InsertName"></strong> We will be in touch.
+            
         </div>
-    }
-
-
-    <p style="padding-top:15px;">Got a question for us? We're happy to answer. Fill out the form and we'll get back to you as soon as we can.</p>
-
-
-    <form class="needs-validation" action="/Home/Contact" method="post" novalidate>
+    
+    <div id="ContactAlertFail" class="alert alert-success alert-dismissible fade show" role="alert" style="display:none;">
+        <strong>Your message failed to send please try again</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <p style="padding-top:15px;">Got a question for us, or simply want to sign up? Fill out the form and we'll get back to you as soon as we can.</p>
+    <form id="ContactForm" class="needs-validation" action="/Home/Contact" method="post" novalidate>
         <div class="form-group">
             <label for="Name">Name</label>
             <input type="text" class="form-control" id="Name" name="Name" placeholder="Full Name" required>
@@ -41,53 +33,109 @@
             </div>
         </div>
         <div class="form-group">
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" id="SignUpCheck" name="Reason" value="SignUp"> Sign Up
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="radio" id="LearnMoreCheck" name="Reason" value="LearnMore"> Learn More
+                </label>
+            </div>
+        </div>
+        
+       
+        <div class="form-group" style="display:none" id="DisplayMessage">
             <label for="Message">Message</label>
-            <textarea class="form-control" id="Message" name="Message" rows="3" placeholder="Message" required></textarea>
+            <textarea class="form-control" id="Message" name="Message" rows="3" placeholder="Message" ></textarea>
             <div class="invalid-feedback">
                 Please provide a message.
             </div>
         </div>
-        <button class="btn btn-secondary" type="submit">Send Message</button>
+        <button id="submitContact" class="btn btn-secondary" type="submit">Sign Up</button>
 
     </form>
 </div>
 
-
-
 @section scripts{
     <script>
         $(document).ready(function () {
-            $('#headerPic').attr("style", "background-image:url('../../Images/lendapp.jpeg')");
+            $('#headerPic').attr("style", "background-image:url('../../Images/LendContact.jpeg')");
             $("h1.heading").text("Contact Us");
-
-
-        });
-        document.addEventListener("DOMContentLoaded", function (event) {
-            setTimeout(function () {
-                //var updateAlert = document.getElementById("SuccessAlert");
-                //updateAlert.style.display = "none";
-                if ($('#ContactAlert').length) {
-                    document.getElementById("ContactAlert").style.display = "none";
-                }
-            }, 5000);
-        });
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
+                /* The following code is executed once the DOM is loaded */
+                /* This flag will prevent multiple comment submits: */
+                var working = false;
+                $("#submitContact").click(function (event) {
+                    var forms = document.getElementsByClassName('needs-validation');
+                    event.preventDefault();
+                    event.stopPropagation();
+                    var validation = Array.prototype.filter.call(forms, function (form) {
                         if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
+                            form.classList.add('was-validated');
                         }
-                        form.classList.add('was-validated');
-                    }, false);
+                        else {
+                            $.ajax({
+                                type: 'POST',
+                                url: $("#ContactForm").attr("action"),
+                                data: $('#ContactForm').serialize(),
+                                success: function (response) {
+                                    $('#submitContact').prop('disabled', true);
+                                    var Name = $("#Name").val();
+                                    $('#InsertName').append("Thank you " + Name + "!");   
+                                    $("#ContactForm").removeClass("was-validated");
+                                    $("#ContactForm").trigger('reset');
+                                    var updateAlert = document.getElementById("ContactAlert");
+                                    updateAlert.style.display = "block";
+                                    setTimeout(function () {
+                                        if ($('#ContactAlert').length) {
+                                            document.getElementById("ContactAlert").style.display = "none";
+                                        }
+                                        $("#InsertName").contents().remove();
+                                        $('#submitContact').prop('disabled', false);
+                                    }, 5000);
+                                },
+                                error: function () {
+                                    document.getElementById("ContactAlertFail").style.display = "none";
+                                    setTimeout(function () {
+                                        if ($('#ContactAlertFail').length) {
+                                            document.getElementById("ContactAlert").style.display = "none";
+                                        }
+                                    }, 5000);
+                                }
+                            });
+                        }  
+                    });
                 });
-            }, false);
-        })();
+             if (@Json.Encode(Model.Scroll) == 1) {
+            $('html,body').animate({
+                scrollTop: $("#ContactForm").offset().top
+            });
+                } 
+            
+        });
+        $('#LearnMoreCheck').change(function () {
+            if ($(this).is(':checked')) {
+                $('#DisplayMessage').attr('style', "display:block");
+                $('#Message').attr('required', true);
+                $("#submitContact").html('Learn More');
+            } else {
+                $('#DisplayMessage').attr('style', "display:none");
+                $('#Message').removeAttr('required');
+                $("#submitContact").html('Sign Up');
+            }
+        });
+        $('#SignUpCheck').change(function () {
+            if ($(this).is(':checked')) {
+                $('#DisplayMessage').attr('style', "display:none");
+                $('#Message').removeAttr('required');
+                $("#submitContact").html('Sign Up');
+            } else {
+                $('#DisplayMessage').attr('style', "display:block");
+                $('#Message').attr('required', true);
+                $("#submitContact").html('Learn More');
+            }
+        });
+       
     </script>
-
 }

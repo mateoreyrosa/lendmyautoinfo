@@ -11,29 +11,28 @@
 
         <div class="col-lg-4" style="text-align:center">
             <div class="space">
-                <img src="~/Images/moneyhand.png" style="width:50%;" />
+                <img src="~/Images/LendMoney.png" style="width:50%;" />
             </div>
-            <h2>Pay once. Save lots.</h2>
+            <h2>Pay Once. Save lots.</h2>
             <p>
                 Avoid the rental counter. As a member you gain access to a network of “car sharers” 
                 
                 saving you hundreds to thousands of dollars in car rental at airports or wherever your travels take you.
 
-
             </p>
         </div>
         <div class="col-lg-4" style="text-align:center">
             <div class="space">
-                <img src="~/Images/settingsicon.jpg" style="width:50%;" />
+                <img src="~/Images/LendSettings.png" style="width:50%;" />
 
             </div>
             <h2>
                 How does it work?
             </h2>
             <p>
-                You share your car while you’re away traveling or not in use and someone else shares their car for you to use at your final destination.  
-                Simple as that. A community of “car-sharers.” 
-                Don’t own a car? Don’t worry you can still become a member. Click “here” to learn more
+                You share your car while you’re away traveling and someone else shares their car for you to use at your final destination.
+                Simple as that. A community of “car-sharers.”
+                Don’t own a car? Don’t worry you can still become a member. Click <a href="@Url.Action("Contact", "Home", new { scroll = 1})">here</a> to learn more.
             </p>
         </div>
         <div class="col-lg-4" style="text-align:center">
@@ -47,7 +46,7 @@
                 Don’t stress about insurance.  Once vetted by one of our representatives our 
                 members can elect to use their own insurance or use our $1,000,000 comprehensive insurance policy.  
                 In either case as an owner your vehicle is protected.  
-                We steer clear from insurance add-on’s you don’t need. Click “here” to learn more.
+                We steer clear from insurance add-on’s you don’t need. Click <a href="@Url.Action("Contact", "Home", new { scroll = 1})">here</a> to learn more.
 
             </p>
         </div>
@@ -76,9 +75,8 @@
                 Our Social Mission
             </h2>
             <p class="justify-content-center">
-                We aim to give back to those, who don’t have access to reliable forms of transportation in your community and around the world keeping sustainability in mind. 
-                Peers helping out their peers. 
-                Beautiful. Want to play a bigger part in our social mission.  Click “here” and let us know you’re interested.
+                We aim to give back to those, who don’t have access to reliable forms of transportation in your community and around the world. Peers helping out their peers.
+                Beautiful. Want to play a bigger part in our social mission? Click <a href="@Url.Action("Contact", "Home", new { scroll = 1})">here</a> and let us know you’re interested.
 
             </p>
         </div>
@@ -90,9 +88,28 @@
             </h4>
         </div>
         <div class="row justify-content-center">
-           <h3>Sign-up now.</h3>
+           <h3>Click <a style="color:#4C4CE2" href="@Url.Action("Contact", "Home", new { scroll = 1})">here</a> to sign up now.</h3>
         </div>
        
+    </div>
+</div>
+<div class="modal fade" id="SurveyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLabel">We value your opinion</h3>
+                <button type="button" onclick="UpdateSession()" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Help us out by taking our survey!
+            </div>
+            <div class="modal-footer">
+                
+                <a href="https://www.surveymonkey.com/r/VFXKRFF" target="_blank"  style="background-color:#4C4CE2; border-color:#4C4CE2" onclick="CloseSurvey()" class="btn btn-primary" role="button">Take Survey</a>
+            </div>
+        </div>
     </div>
 </div>
 <style>
@@ -106,8 +123,22 @@
     <script>
         $(document).ready(function () {
 
-            $('#headerPic').attr("style", "background-image:url('../../Images/sampleLEndMyAuto.jpeg')");
-            $("h1.heading").text("Lending Made Easy");
+            $('#headerPic').attr("style", "background-image:url('../../Images/LendHome1.jpeg')");
+            $("h1.heading").text("Community of Car Sharers");
+            if (@Session["Survey"] == 1) {
+                $('#SurveyModal').modal('show');
+            }
+        });
+        function CloseSurvey(){
+            $('#SurveyModal').modal('hide');
+            UpdateSession();
+        }
+        function UpdateSession() {
+            $.get('@Url.Action("UpdateSurvey", "Home")', function () {
+            });
+        }
+        $(document).click(function () {
+            UpdateSession();
         });
     </script>
 
