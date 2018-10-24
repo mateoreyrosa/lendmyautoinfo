@@ -51,9 +51,9 @@ namespace lendmyautoinfo.Controllers
         }
         public void SendEmail(string emailAddress, string Name, string Reason, string Message)
         {
-            GMailer.GmailUsername = "bfhchicken@gmail.com";
-            GMailer.GmailPassword = "mateoreyrosa";
-            if (Reason == "SignUP")
+            GMailer.GmailUsername = "info@lendmyauto.com";
+            GMailer.GmailPassword = "wvwfeepkodenvzju";
+            if (Reason == "SignUp")
             {
                 Reason = "Sign Up";
             }
@@ -62,7 +62,7 @@ namespace lendmyautoinfo.Controllers
             }
             GMailer mailer = new GMailer
             {
-                ToEmail = "bfhchicken@gmail.com",
+                ToEmail = "info@lendmyauto.com",
                 Subject = Reason,
                 Body = "The following message is from the Lend My Auto website: " + Environment.NewLine +  Name + " wants to " + Reason + ". They left the following message: " + Message + Environment.NewLine + " Their email address is: " + emailAddress,
                 IsHtml = true
