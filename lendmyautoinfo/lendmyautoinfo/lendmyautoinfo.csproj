@@ -20,7 +20,7 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-    <IISExpressSSLPort />
+    <IISExpressSSLPort>44378</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
@@ -161,19 +161,13 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Images\AboutUsLend.jpg" />
     <Content Include="Images\checkbox.png" />
-    <Content Include="Images\contactuslendmyauto.jpg" />
-    <Content Include="Images\FAQ.jpeg" />
-    <Content Include="Images\lendapp.jpeg" />
     <Content Include="Images\LendBrick.jpeg" />
     <Content Include="Images\LendCarSearch.png" />
     <Content Include="Images\LendCommunity.jpeg" />
     <Content Include="Images\LendContact.jpeg" />
     <Content Include="Images\LendFacebook.png" />
     <Content Include="Images\LendHome1.jpeg" />
-    <Content Include="Images\lendhome.jpeg" />
-    <Content Include="Images\LendHome.png" />
     <Content Include="Images\LendHome3White.jpeg" />
     <Content Include="Images\LendInstagram.png" />
     <Content Include="Images\LendLinkedIn.png" />
@@ -184,15 +178,10 @@
     <Content Include="Images\LendNumber3.png" />
     <Content Include="Images\LendProfile.png" />
     <Content Include="Images\LendSettings.png" />
-    <Content Include="Images\lendshare.jpeg" />
     <Content Include="Images\LendTwitter.png" />
     <Content Include="Images\LendUserAdd.png" />
-    <Content Include="Images\moneyhand.png" />
-    <Content Include="Images\sampleLEndMyAuto.jpeg" />
-    <Content Include="Images\umbrella2.png" />
     <Content Include="Images\umbrella3.png" />
     <Content Include="Images\volunteer2.png" />
-    <Content Include="Images\volunteering.png" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -268,6 +257,10 @@
     <Content Include="Views\Home\FAQ.cshtml" />
     <Content Include="Views\Home\TermsAndConditions.cshtml" />
     <Content Include="Views\Home\PrivacyPolicy.cshtml" />
+    <Content Include="Views\Shared\_AboutUsLayout.cshtml" />
+    <Content Include="Views\Shared\_SharingLayout.cshtml" />
+    <Content Include="Views\Shared\_ContactLayout.cshtml" />
+    <Content Include="Views\Shared\_FAQLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -302,7 +295,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50227</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50227/</IISUrl>
+          <IISUrl>https://localhost:44378/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

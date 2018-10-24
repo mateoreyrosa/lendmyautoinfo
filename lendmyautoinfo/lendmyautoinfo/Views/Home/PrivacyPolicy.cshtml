@@ -1,6 +1,7 @@
 ﻿
 @{
-    ViewBag.Title = "PrivacyPolicy";
+    ViewBag.Title = "Privacy Policy";
+
 }
 
 <div class="container" style="padding-top:70px;">
@@ -8,6 +9,13 @@
         Your browser does not support iframes.
     </iframe>
 </div>
-   
 
+@section scripts{
+    <script>
+        $(document).ready(function () {
+
+            $("h1.heading").text("Privacy Policy");
+        });
+    </script>
+}
 

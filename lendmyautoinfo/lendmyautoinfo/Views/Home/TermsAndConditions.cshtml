@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "TermsAndConditions";
+    ViewBag.Title = "Terms And Conditions";
 }
 
 <div class="container" style="padding-top:70px;">
@@ -8,5 +8,12 @@
         Your browser does not support iframes.
     </iframe>
 </div>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $("h1.heading").text("Terms and Conditions");
+        });
+    </script>
 
-   
+}
+

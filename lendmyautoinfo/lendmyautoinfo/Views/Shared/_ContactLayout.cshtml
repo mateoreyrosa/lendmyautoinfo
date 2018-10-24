@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Lend My Auto</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <header id="headerPic" width="25%" style="background-image:url('../../Images/LendContact.jpeg')">
+        <h1 style="font-size:73px; " class="heading"></h1>
+        <p></p>
+    </header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light">
+
+        <div class="container" style="margin-top:10px;">
+            <a href="/Home"><img src="~/Images/lendmyauto2.png" style="width:70%;" /></a>
+            <button id="NavTogglerLend" class="navbar-toggler" type="button" onclick="SolidNav()" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="container" style="margin-top:10px;">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav flex-fill w-100 flex-nowrap justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Home">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Sharing">Community of Car Sharers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/FAQ">FAQ's</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </nav>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="d-flex flex-row flex-inline-row mb-3">
+                <div class=" d-flex justify-content-start w-25">
+                    <div class="p-2 bd-highlight"><p style="font-size:12px;">Copyright &copy; @DateTime.Now.Year - Lend My Auto</div>
+                </div>
+                <div class=" d-flex w-100 justify-content-end">
+                    <div class="p-2 bd-highlight"> <a style="color:#4C4CE2" href="/Home/TermsAndConditions">Terms of Use</a></div>
+                    <div class="p-2 bd-highlight"> <a style="color:#4C4CE2" href="/Home/PrivacyPolicy">Privacy Policy</a></div>
+                    <div class="p-2 bd-highlight"><a href="https://www.facebook.com/lendmyauto/" target="_blank"><img src="~/Images/LendFacebook.png" style="width:72%" /> </a></div>
+                    <div class="p-2 bd-highlight"><a href="https://www.instagram.com/lendmyauto/" target="_blank"><img src="~/Images/LendInstagram.png" style="width:74%" /> </a></div>
+                    <div class="p-2 bd-highlight"><a href="https://www.linkedin.com/company/lendmyauto-com/" target="_blank"><img src="~/Images/LendLinkedIn.png" style="width:64%" /> </a></div>
+                    <div class="p-2 bd-highlight"><a href="https://twitter.com/lendtocare" target="_blank"><img src="~/Images/LendTwitter.png" style="width:76%" /> </a></div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/navbar")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

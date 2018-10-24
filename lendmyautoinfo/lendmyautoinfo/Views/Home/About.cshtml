@@ -1,10 +1,10 @@
 ﻿@{
-    ViewBag.Title = "About";
+    Layout = "~/Views/Shared/_AboutUsLayout.cshtml";
+    ViewBag.Title = "About Us";
 
 }
 <div class="container" style="padding-top:70px;">
     <h1 class="d-flex justify-content-center">What makes us move</h1>
-
 
 <div style="margin-top:15px;">
     <p>
@@ -20,7 +20,6 @@
 @section scripts{
     <script>
     $(document).ready(function () {
-        $('#headerPic').attr("style", "background-image:url('../../Images/LendBrick.jpeg')");
         $("h1.heading").text("About Us");
     });
 </script>

@@ -123,8 +123,12 @@
     <script>
         $(document).ready(function () {
 
-            $('#headerPic').attr("style", "background-image:url('../../Images/LendHome1.jpeg')");
-            $("h1.heading").text("Community of Car Sharers");
+            $("h1.heading").attr("style", "text-align:left; font-size: 73px; margin-left: 10%;");
+            $("h1.heading-2").attr("style", "text-align:left; font-size: 73px; padding-top:10px; margin-left: 10%;");
+
+            $("h1.heading").text("Community of");
+            $("h1.heading-2").text("Car Sharers");
+
             if (@Session["Survey"] == 1) {
                 $('#SurveyModal').modal('show');
             }

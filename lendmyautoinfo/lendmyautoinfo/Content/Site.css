@@ -83,6 +83,16 @@ header > .heading {
     padding-top: 200px;
 }
 
+header > .heading-2 {
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.outline-header {
+
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
 /*end the navbar styles */
 
 /*Solid nav bar style*/
@@ -104,18 +114,13 @@ header > .heading {
 /*End solid styles*/
 
 
-.steps {
 
-    padding-top:15px;
-    padding-bottom:15px; 
-}
 
 .step {
     border-top-width: 1px;
     border-top-style: solid;
     border-top-color: rgb(206, 206, 206);
-    padding-top: 30px;
-    padding-bottom: 30px;
+
 }
 .step-title {
     font-weight: 700;
@@ -202,4 +207,13 @@ div:nth-child(2) button {
 .card-body {
 font-size: 14px;
 
+}
+
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#4C4CE2' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#4C4CE2' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
