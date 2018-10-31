@@ -169,6 +169,8 @@
     <Content Include="Images\LendFacebook.png" />
     <Content Include="Images\LendHome1.jpeg" />
     <Content Include="Images\LendHome3White.jpeg" />
+    <Content Include="Images\LendHome3WhiteSmall.png" />
+    <Content Include="Images\LendHomeSmall.png" />
     <Content Include="Images\LendInstagram.png" />
     <Content Include="Images\LendLinkedIn.png" />
     <Content Include="Images\LendMoney.png" />
@@ -261,6 +263,7 @@
     <Content Include="Views\Shared\_SharingLayout.cshtml" />
     <Content Include="Views\Shared\_ContactLayout.cshtml" />
     <Content Include="Views\Shared\_FAQLayout.cshtml" />
+    <Content Include="Views\Home\_Footer.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

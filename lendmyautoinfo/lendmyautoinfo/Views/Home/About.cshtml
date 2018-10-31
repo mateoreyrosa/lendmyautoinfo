@@ -1,28 +1,62 @@
 ﻿@{
     Layout = "~/Views/Shared/_AboutUsLayout.cshtml";
-    ViewBag.Title = "About Us";
+
 
 }
 <div class="container" style="padding-top:70px;">
-    <h1 class="d-flex justify-content-center">What makes us move</h1>
+    <h1 class="d-flex justify-content-center subheading">What makes us move</h1>
 
-<div style="margin-top:15px;">
-    <p>
-        With his life savings in hand and a dream in mind our founder Brandon Steinbeigle
-        envisions a world where we can enrich our own lives by sharing our own cars while saving
-        hundreds to thousands of dollars over traditional car rental companies. He believes that in
-        doing so, a larger problem in the world can be solved, connecting the have-nots in this
-        world with adequate, reliable means of transportation.
-    </p>
-</div>
+    <div style="margin-top:15px;">
+        <p>
+            With nothing more than a backpack, our founder Brandon Steinbeigle has been fortunate
+            enough to travel through some of the poorest parts of this planet. During his travels, his
+            outlook of this world changed. He realized that you don’t need a lot in life to be completely
+            content. He realized that true happiness comes from our experiences and through our
+            interactions, connections with others.
+        </p>
+        <p>
+            In August of 2017, with a few hundred bucks to his name, Brandon founded lendmyauto.com
+            while driving down an empty street littered with some of Portland, Oregon’s homeless. Not
+            being too far away from being homeless himself he knew he had the responsibility in this world
+            do more for others who have less.
+        </p>
+        <div id="SeeMore">
+            <p style="text-align:center; margin-bottom:0px;">
+                See More
+            </p>
+            <div style="text-align:center">
+                <span class="chev down" style="padding:7px;"></span>
+            </div>
+        </div>
+        <div style="display:none" id="Expand">
+            <p>
+                The marketplace today is littered with companies that claim to be a part of the “sharing”
+                economy. Since when is - Hey, I’ll let you use my car if you pay me in return - a sharing economy
+                company? The statement above motivates people like you and I to buy more cars, so we can
+                make money off of those cars which, in return, adds more cars to already congested roads-It’s
+                conditional and because of this, is not really sharing at all. What if we were to share our cars
+                that we already own unconditionally? Could we connect with others around the world? Could
+                we get to the point of trusting complete strangers with our cars?
+            </p>
+            <p>
+                Traveling is expensive. You need to book a hotel or reserve an Airbnb and rent a car to get
+                where you’re headed. What if together, we created a community of people willing to share
+                unconditionally? We would eliminate the high cost of travel and perhaps we can use that
+                money to buy life experiences that traveling can afford you. Would this lead to a more
+                understanding society? Could people who live so far away become a little closer?
+            </p>
+        </div>
+
     </div>
-
-@section scripts{
-    <script>
-    $(document).ready(function () {
-        $("h1.heading").text("About Us");
+    </div>
+<script>
+    $(document).ready(function(){
+        $("span.chev").on("click", function () {
+            $('#SeeMore').attr("style", "display:none");
+            $('#Expand').attr("style", "display:block");
+            
+        });
     });
+   
 </script>
-
-}
 

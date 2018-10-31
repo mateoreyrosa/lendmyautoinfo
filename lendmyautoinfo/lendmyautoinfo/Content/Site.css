@@ -20,28 +20,6 @@ p {
 }
 
 
-/* Set width on the form input elements since they're 100% wide by default */
-
-
-.pill {
-    width: 40%;
-    margin: auto;
-    background-image: linear-gradient(rgb(133, 134, 140),rgb(133, 134, 140));
-    min-width: 220px;
-    border-radius: 30px !important;
-    height: 45px !important;
-    z-index: 9999;
-    padding-top: 9px;
-}
-
-.pill-text {
-    z-index: inherit;
-    color: white;
-    white-space: nowrap;
-    text-align: center;
-    font: normal 15px / 27px "Roboto", Helvetica, Arial, Verdana, sans-serif;
-}
-
 
 /*Image style for navbar and the main heading per page */
 
@@ -50,7 +28,6 @@ header {
     min-height: 400px;
     width: 100%;
     background-size: cover;
-    background-image: url('../../Images/sampleLEndMYAUTO.jpeg');
 }
 .navbar {
     transition: background-color 1s ease 0s;
@@ -77,17 +54,8 @@ header > .btn {
      
  }
 
-header > .heading {
-    color: white;
-    text-align: center;
-    padding-top: 200px;
-}
 
-header > .heading-2 {
-    color: white;
-    text-align: center;
-    padding-top: 200px;
-}
+
 
 .outline-header {
 
@@ -217,3 +185,179 @@ font-size: 14px;
 .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#4C4CE2' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
+@media (min-width: 0px) {
+    .signcall-font {
+        font-size: 0.9rem;
+    }
+    .faq-img {
+        background-image: url('../../Images/LendHome3WhiteSmall.png')
+    }
+    .home-image {
+        background-image: url('../../Images/LendHomeSmall.png');
+    }
+    .social-img {
+        width: 84%;
+    }
+    .subheading {
+        font-size: 1.5rem;
+    }
+    .header-name {
+        font-size: 30px;
+    }
+    header > .heading {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    header > .heading-2 {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+    .sharing {
+        font-size: 45px;
+    }
+    .contact-title {
+        font-size: 73px;
+    }
+}
+@media (min-width: 320px) {
+    .signcall-font {
+        font-size: 0.9rem;
+    }
+    .faq-img {
+        background-image: url('../../Images/LendHome3WhiteSmall.png')
+    }
+    .home-image {
+        background-image: url('../../Images/LendHomeSmall.png');
+
+    }
+    .social-img {
+        width: 84%;
+    }
+    .subheading {
+        font-size: 1.65rem;
+    }
+    .header-name {
+        font-size: 30px;
+    }
+    header > .heading {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    header > .heading-2 {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+    .sharing {
+        font-size: 45px;
+    }
+    .contact-title {
+        font-size: 50px;
+    }
+
+}
+
+/*Small devices (landscape phones, 544px and up) */
+@media (min-width: 544px) {
+    .signcall-font {
+        font-size: 1.5rem;
+    }
+    .faq-img {
+        background-image: url('../../Images/LendHome3White.jpeg')
+    }
+    .home-image {
+        background-image: url('../../Images/LendHome1.jpeg');
+    }
+    .social-img {
+        width: 72%;
+    }
+    .subheading {
+        font-size: 2.5rem;
+    }
+    .header-name
+
+{
+    font-size: 73px;
+}
+    header > .heading {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    header > .heading-2 {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    .sharing {
+        font-size: 73px;
+    }
+    .contact-title {
+        font-size: 73px;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .faq-img {
+        background-image: url('../../Images/LendHome3White.jpeg')
+    }
+    .home-image {
+        background-image: url('../../Images/LendHome1.jpeg');
+    }
+    .social-img {
+        width: 72%;
+    }
+    .header-name {
+        font-size: 73px;
+    }
+    header > .heading {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+
+    header > .heading-2 {
+        color: white;
+        text-align: center;
+        padding-top: 200px;
+    }
+    .sharing {
+        font-size: 73px;
+    }
+    .contact-title {
+        font-size: 73px;
+    }
+}
+
+.navbar-light .navbar-toggler {
+    color: #4C4CE2;
+    border-color: #4C4CE2;
+}
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto #4C4CE2;
+}
+
+.chev {
+    border: solid #4C4CE2;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    color: #4C4CE2;
+   
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+

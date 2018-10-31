@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Lend My Auto</title>
+    <link rel="icon" href="@Url.Content("/Images/lendmyauto2.png")" />
+    <title>@ViewBag.Title - Community</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
     <header id="headerPic" width="25%" style="background-image:url('../../Images/LendCommunity.jpeg')">
-        <h1 style="font-size:73px; " class="heading"></h1>
-        
+        <h1 class="heading sharing outline-header">I share my car. You share your car.</h1>
         <p></p>
     </header>
     <nav class="navbar navbar-expand-lg fixed-top navbar-light">
@@ -49,22 +49,7 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <div class="d-flex flex-row flex-inline-row mb-3">
-                <div class=" d-flex justify-content-start w-25">
-                    <div class="p-2 bd-highlight"><p style="font-size:12px;">Copyright &copy; @DateTime.Now.Year - Lend My Auto</div>
-                </div>
-                <div class=" d-flex w-100 justify-content-end">
-                    <div class="p-2 bd-highlight"> <a style="color:#4C4CE2" href="/Home/TermsAndConditions">Terms of Use</a></div>
-                    <div class="p-2 bd-highlight"> <a style="color:#4C4CE2" href="/Home/PrivacyPolicy">Privacy Policy</a></div>
-                    <div class="p-2 bd-highlight"><a href="https://www.facebook.com/lendmyauto/" target="_blank"><img src="~/Images/LendFacebook.png" style="width:72%" /> </a></div>
-                    <div class="p-2 bd-highlight"><a href="https://www.instagram.com/lendmyauto/" target="_blank"><img src="~/Images/LendInstagram.png" style="width:74%" /> </a></div>
-                    <div class="p-2 bd-highlight"><a href="https://www.linkedin.com/company/lendmyauto-com/" target="_blank"><img src="~/Images/LendLinkedIn.png" style="width:64%" /> </a></div>
-                    <div class="p-2 bd-highlight"><a href="https://twitter.com/lendtocare" target="_blank"><img src="~/Images/LendTwitter.png" style="width:76%" /> </a></div>
-                </div>
-
-            </div>
-        </footer>
+        @{ Html.RenderPartial("_Footer", null, null); }
     </div>
 
     @Scripts.Render("~/bundles/jquery")
