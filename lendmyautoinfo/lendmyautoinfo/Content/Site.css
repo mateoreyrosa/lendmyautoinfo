@@ -186,6 +186,9 @@ font-size: 14px;
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#4C4CE2' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 @media (min-width: 0px) {
+    .home-icons {
+        text-align: center;
+    }
     .footer-text {
         font-size: 0.45rem;
     }
@@ -226,6 +229,9 @@ font-size: 14px;
     }
 }
 @media (min-width: 320px) {
+    .home-icons {
+       text-align:center;
+    }
     .footer-text {
         font-size: 0.45rem;
     }
@@ -270,6 +276,9 @@ font-size: 14px;
 
 /*Small devices (landscape phones, 544px and up) */
 @media (min-width: 544px) {
+    .home-icons {
+        text-align:center;
+    }
     .footer-text {
     font-size:1rem;
     }
@@ -316,6 +325,9 @@ font-size: 14px;
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    .home-icons {
+        text-align: right;
+    }
     .footer-text {
         font-size: 1rem;
     }
