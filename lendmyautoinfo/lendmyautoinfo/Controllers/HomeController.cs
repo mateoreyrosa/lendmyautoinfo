@@ -52,7 +52,7 @@ namespace lendmyautoinfo.Controllers
         public void SendEmail(string emailAddress, string Name, string Reason, string Message)
         {
             GMailer.GmailUsername = "info@lendmyauto.com";
-            GMailer.GmailPassword = "wvwfeepkodenvzju";
+            GMailer.GmailPassword = "";
             if (Reason == "SignUp")
             {
                 Reason = "Sign Up";
