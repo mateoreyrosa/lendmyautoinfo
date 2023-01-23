@@ -1,2 +1,2 @@
 # lendmyautoinfo
-.info site
+.info site for a car lending app concept
